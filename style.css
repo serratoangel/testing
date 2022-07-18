@@ -1,41 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 * {
     box-sizing: border-box;
-}
-
-/* mulish-500 - latin */
-@font-face {
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 500;
-    src: local(''),
-        url('../fonts/mulish-v12-latin-500.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/mulish-v12-latin-500.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* mulish-700 - latin */
-@font-face {
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 700;
-    src: local(''),
-        url('../fonts/mulish-v12-latin-700.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/mulish-v12-latin-700.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* mulish-900 - latin */
-@font-face {
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 900;
-    src: local(''),
-        url('../fonts/mulish-v12-latin-900.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/mulish-v12-latin-900.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 body {
@@ -53,7 +19,7 @@ body {
     width: 90vw;
 }
 
-.container-panel {
+.panel {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -64,10 +30,10 @@ body {
     flex: 0.5;
     margin: 10px;
     position: relative;
-    transition: all 700ms ease-in;
+    -webkit-transition: all 700ms ease-in;
 }
 
-.container-panel h3 {
+.panel h3 {
     font-size: 24px;
     position: absolute;
     bottom: 20px;
@@ -76,11 +42,11 @@ body {
     opacity: 0;
 }
 
-.container-panel.container-panel__active {
+.panel.active {
     flex: 5;
 }
 
-.container-panel.container-panel__active h3 {
+.panel.active h3 {
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
 }
@@ -90,8 +56,8 @@ body {
         width: 100vw;
     }
 
-    .container-panel:nth-of-type(4),
-    .container-panel:nth-of-type(5) {
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
         display: none;
     }
 }
